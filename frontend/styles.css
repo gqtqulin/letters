@@ -1,0 +1,47 @@
+/* Tailwind directives + custom */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    body {
+        @apply bg-gradient-to-br from-pink-50 via-rose-50 to-purple-50 min-h-screen;
+    }
+}
+
+@layer components {
+    .login-screen {
+        @apply flex items-center justify-center min-h-screen p-4;
+    }
+
+    .login-card {
+        @apply bg-white/80 backdrop-blur-xl p-12 rounded-3xl shadow-2xl max-w-md w-full mx-4 border border-white/50;
+    }
+
+    .love-icon {
+        @apply w-24 h-24 bg-gradient-to-r from-pink-400 to-rose-500 rounded-full mx-auto mb-6 flex items-center justify-center text-3xl shadow-lg;
+    }
+
+    .letter-card {
+        @apply bg-white shadow-2xl rounded-2xl p-6 cursor-pointer overflow-hidden relative;
+    }
+
+    .letter-hover {
+        @apply transition-all duration-300;
+    }
+
+    .letter-hover:hover {
+        @apply -translate-y-2 rotate-1;
+    }
+
+    .pulse-unread {
+        animation: pulse 2s infinite;
+    }
+}
+
+@keyframes pulse {
+    0%, 100% { box-shadow: 0 0 0 0 rgba(239,68,68,0.7); }
+    50% { box-shadow: 0 0 0 12px rgba(239,68,68,0); }
+}
+
+/* Остальные стили... */
